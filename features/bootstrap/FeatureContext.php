@@ -8,7 +8,6 @@ use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
 use Behat\Behat\Event\ScenarioEvent;
-use WebDriver\WebDriver;
 use Behat\Mink\Driver\Selenium2Driver;
 use Behat\Mink\Session;
 //
