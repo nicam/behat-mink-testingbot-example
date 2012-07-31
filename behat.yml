@@ -1,0 +1,37 @@
+default:
+    context:
+        parameters:
+            #wd_host: localhost:4445/wd/hub #use this if your using tesstingbot-tunnel
+            wd_host: hub.testingbot.com:4444/wd/hub
+            key: YOURKEYHERE
+            secret: YOURSECRETHERE
+    extensions:
+        Behat\MinkExtension\Extension:
+            base_url: http://en.wikipedia.org
+            goutte: ~
+            selenium2: ~
+local:
+    extensions:
+        Behat\MinkExtension\Extension:
+            goutte: ~
+            selenium2: ~
+firefox:
+    context:
+        parameters:
+            instances:
+                firefox: { "platform": "WINDOWS", "browserName": "firefox", "browserVersion": "14", "version": "14" }
+    extensions:
+        Behat\MinkExtension\Extension:
+            selenium2:
+                # wd_host: YOURKEYHERE:YOURSECRETHERE@localhost:4445/wd/hub #Use this for testingbot-tunnel
+                wd_host: YOURKEYHERE:YOURSECRETHERE@hub.testingbot.com:4444/wd/hub
+iphone:
+    context:
+        parameters:
+            instances:
+                iphone: { "platform": "MAC", "browserName": "iphone" }
+    extensions:
+        Behat\MinkExtension\Extension:
+            selenium2:
+                # wd_host: YOURKEYHERE:YOURSECRETHERE@localhost:4445/wd/hub #Use this for testingbot-tunnel
+                wd_host: YOURKEYHERE:YOURSECRETHERE@hub.testingbot.com:4444/wd/hub
