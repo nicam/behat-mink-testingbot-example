@@ -20,9 +20,9 @@ Replace all places where it says `YOURKEYHERE` with your key and `YOURSECRETHERE
 
 ####Run Behat
 #####Run it on an iPhone
-	behat -p iphone
+	bin/behat -p iphone
 #####Run it on firefox
-	behat -p firefox
+	bin/behat -p firefox
 
 You should get the following output:
 
