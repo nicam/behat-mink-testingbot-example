@@ -63,7 +63,7 @@ class FeatureContext extends MinkContext
         if (empty($this->parameters['instances'])) {
             return; // Local Setup doesn't need to transmit data to testingbot
         }
-        $url = $this->getSession()->getDriver()->wdSession->getURL();
+        $url = $this->getSession()->getCurrentUrl();
 
         $parts = explode("/", $url);
         $sessionID = $parts[sizeof($parts) - 1];
